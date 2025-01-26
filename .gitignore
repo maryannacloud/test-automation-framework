@@ -1,2 +1,18 @@
-node_modules
-node_modules
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS-specific files
+.DS_Store
+
+# Cypress output
+cypress/screenshots/
+cypress/videos/
+
+# Coverage files
+coverage/
+
+# Environment variables
+.env

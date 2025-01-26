@@ -3,12 +3,20 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress open",
+    "cy:run": "cypress run",
+    "lint": "eslint '**/*.{ts, js}' --quiet",
+    "build": "tsc",
+    "debug": "cypress open --env debug=true"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": ["Cypress", "TypeScript", "Test Automation"],
+  "author": "Maryna Nesterenko",
   "license": "ISC",
-  "description": "",
+  "description": "Test Automation Framework using Cypress and TypeScript",
   "devDependencies": {
     "@types/node": "^22.10.10",
     "@typescript-eslint/eslint-plugin": "^8.21.0",
