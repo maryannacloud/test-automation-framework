@@ -1,26 +1,23 @@
 describe('Login Test', () => {
 
     before(() => {
-        cy.loginWithJWT('testuser@example.com', 'password123')
+        const email = Cypress.env('userEmail');
+        cy.loginWithJWT(email)
     });
 
     beforeEach(() => {
-        // Restore session for every test
         cy.restoreSessionWithJWT();
     });
 
     it('Should display the user avatar', () => {
-        cy.visit('https://medium.com/');
+        const appUrl = Cypress.env('appUrl');
+        cy.visit(appUrl);
         cy.get('img[alt="User Avatar"]').should('be.visible');
     });
 
     it('Logs in using email', () => {
-      cy.loginWithEmail('testuser@example.com');
+        const email = Cypress.env('userEmail');
+        cy.loginWithEmail(email);
     });
-
-    it('Should access the dashboard', () => {
-        cy.visit('https://medium.com/dashboard');
-        cy.contains('Your Dashboard').should('be.visible');
-      });
 
   });

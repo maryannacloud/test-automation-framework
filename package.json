@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "runner": "cupress open --e2e --browser chrome",
-    "test": "cypress open",
+    "runner": "cypress open",
+    "runner:e2e": "cypress open --e2e --browser chrome",
     "cy:run": "cypress run",
     "lint": "eslint '**/*.{ts, js}' --quiet",
     "build": "tsc",
